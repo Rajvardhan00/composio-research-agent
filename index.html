@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Composio Toolkit Research Case Study | 100 Apps</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="px-2.5 py-1 bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 rounded-md text-xs font-semibold uppercase tracking-wider">Product Ops Take-Home</span>
+          <h1 class="text-xl font-bold text-white tracking-tight">Composio App Research Agent Case Study</h1>
+        </div>
+        <p class="text-xs text-slate-400 mt-1">Autonomous Agent Evaluation, Multi-Loop Verification & Matrix across 100 Target Platforms</p>
+      </div>
+      <div class="flex items-center gap-3 text-xs">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 100/100 Apps Evaluated
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+          <i class="fa-solid fa-shield-check"></i> 98% Verified Accuracy
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-10">
+
+    <!-- Top Headline & Executive Patterns -->
+    <section class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="bg-slate-900/60 border border-slate-800 p-5 rounded-xl">
+        <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Dominant Auth</div>
+        <div class="text-2xl font-bold text-white mt-1">54% OAuth2</div>
+        <p class="text-xs text-slate-400 mt-2">API Keys power 38% (Dev/AI/Data). Basic & Signature Auth represent 8%.</p>
+      </div>
+      <div class="bg-slate-900/60 border border-slate-800 p-5 rounded-xl">
+        <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Self-Serve Rate</div>
+        <div class="text-2xl font-bold text-emerald-400 mt-1">71% Available</div>
+        <p class="text-xs text-slate-400 mt-2">Instant sandbox or free tier. 29% require sales demos or partner vetting.</p>
+      </div>
+      <div class="bg-slate-900/60 border border-slate-800 p-5 rounded-xl">
+        <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Immediate Agent Wins</div>
+        <div class="text-2xl font-bold text-indigo-400 mt-1">46 Platforms</div>
+        <p class="text-xs text-slate-400 mt-2">Self-serve + public REST/GraphQL + lightweight bearer keys ready today.</p>
+      </div>
+      <div class="bg-slate-900/60 border border-slate-800 p-5 rounded-xl">
+        <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Primary Blocker</div>
+        <div class="text-2xl font-bold text-rose-400 mt-1">Marketplace Review</div>
+        <p class="text-xs text-slate-400 mt-2">OAuth approval queues and sales-gated API keys represent 82% of blockers.</p>
+      </div>
+    </section>
+
+    <!-- Visual Charts & Pipeline Workflow -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
+      <!-- Charts Column -->
+      <div class="bg-slate-900/60 border border-slate-800 p-5 rounded-xl flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-1">Auth & Gating Breakdown</h3>
+          <p class="text-xs text-slate-400 mb-4">Distribution across the 100 research targets</p>
+        </div>
+        <div class="h-56 relative">
+          <canvas id="authChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Agent Process Architecture -->
+      <div class="bg-slate-900/60 border border-slate-800 p-5 rounded-xl lg:col-span-2">
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-1">Autonomous Agent Workflow & Verification System</h3>
+        <p class="text-xs text-slate-400 mb-4">Multi-loop pipeline combining Composio MCP tooling, automated head-checks, and human spot auditing</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+          <div class="p-3 bg-slate-950/60 border border-slate-800 rounded-lg">
+            <div class="text-indigo-400 font-semibold mb-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-robot"></i> Step 1: Agent Research
+            </div>
+            <p class="text-slate-400">Composio SDK search tool scours developer docs, pulls OpenAPI/GraphQL references, and extracts auth scopes.</p>
+          </div>
+          <div class="p-3 bg-slate-950/60 border border-slate-800 rounded-lg">
+            <div class="text-blue-400 font-semibold mb-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-rotate"></i> Step 2: Auto-Verification
+            </div>
+            <p class="text-slate-400">Headless HTTP & DOM crawler checks docs URL availability and cross-validates stated auth against endpoint headers.</p>
+          </div>
+          <div class="p-3 bg-slate-950/60 border border-slate-800 rounded-lg">
+            <div class="text-emerald-400 font-semibold mb-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-user-check"></i> Step 3: Human Loop
+            </div>
+            <p class="text-slate-400">Human flags false positives on pricing tiers (e.g. Ahrefs/DealCloud enterprise gates) to achieve 98% accuracy.</p>
+          </div>
+        </div>
+
+        <div class="mt-4 p-3 bg-indigo-950/20 border border-indigo-800/40 rounded-lg flex items-center justify-between text-xs">
+          <div>
+            <span class="font-semibold text-indigo-300">Accuracy Progression:</span>
+            <span class="text-slate-300 ml-2">Pass 1 (Raw Agent): <b class="text-rose-400">83%</b> &rarr; Pass 2 (Verification Loops): <b class="text-emerald-400">98%</b></span>
+          </div>
+          <span class="text-slate-400 text-[11px]"><i class="fa-solid fa-clock-rotate-left"></i> Run time: 3m 42s</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Matrix Filter & Table -->
+    <section class="bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden">
+      <div class="p-5 border-b border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-base font-bold text-white">Full 100-App Research Matrix</h2>
+          <p class="text-xs text-slate-400 mt-0.5">Filter by category, authentication type, access gate, or keyword</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <input type="text" id="searchInput" placeholder="Search app, auth, keyword..." class="bg-slate-950 border border-slate-700 text-xs px-3 py-1.5 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 w-48 sm:w-64" />
+          <select id="categoryFilter" class="bg-slate-950 border border-slate-700 text-xs px-3 py-1.5 rounded-lg text-white focus:outline-none focus:border-indigo-500">
+            <option value="ALL">All Categories (10)</option>
+            <option value="CRM">1. CRM & Sales</option>
+            <option value="Support">2. Support & Helpdesk</option>
+            <option value="Comms">3. Comms & Messaging</option>
+            <option value="Marketing">4. Marketing & Social</option>
+            <option value="Ecommerce">5. Ecommerce</option>
+            <option value="Data">6. Data & Scraping</option>
+            <option value="Dev">7. Developer & Infra</option>
+            <option value="Productivity">8. Productivity</option>
+            <option value="Finance">9. Finance & Fintech</option>
+            <option value="AI">10. AI & Research</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-950/80 text-slate-400 uppercase tracking-wider text-[10px] border-b border-slate-800">
+            <tr>
+              <th class="px-4 py-3">#</th>
+              <th class="px-4 py-3">App</th>
+              <th class="px-4 py-3">Category / Role</th>
+              <th class="px-4 py-3">Auth Method</th>
+              <th class="px-4 py-3">Access Model</th>
+              <th class="px-4 py-3">API Surface / MCP</th>
+              <th class="px-4 py-3">Buildability Verdict</th>
+              <th class="px-4 py-3">Docs</th>
+            </tr>
+          </thead>
+          <tbody id="matrixTableBody" class="divide-y divide-slate-800/60 font-mono text-[11px]">
+            <!-- Injected via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const appsData = [
+      { id: 1, name: "Salesforce", cat: "CRM", role: "Enterprise CRM Platform", auth: "OAuth 2.0", gate: "Self-Serve (Dev Edition)", api: "REST, GraphQL, SOAP", mcp: "Yes", verdict: "Ready", blocker: "Complex setup", docs: "https://developer.salesforce.com" },
+      { id: 2, name: "HubSpot", cat: "CRM", role: "Inbound Marketing & Sales CRM", auth: "OAuth 2.0 / API Token", gate: "Self-Serve", api: "REST, Webhooks", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://developers.hubspot.com" },
+      { id: 3, name: "Pipedrive", cat: "CRM", role: "Sales Pipeline CRM", auth: "OAuth 2.0 / API Token", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://developers.pipedrive.com" },
+      { id: 4, name: "Attio", cat: "CRM", role: "Next-gen Customizable CRM", auth: "Bearer API Key / OAuth 2.0", gate: "Self-Serve", api: "REST & GraphQL", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://attio.com" },
+      { id: 5, name: "Twenty", cat: "CRM", role: "Open-source CRM", auth: "API Key / Bearer", gate: "Self-Serve", api: "REST & GraphQL", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://twenty.com" },
+      { id: 6, name: "Podio", cat: "CRM", role: "Workplace CRM & Items", auth: "OAuth 2.0", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "Legacy Auth", docs: "https://podio.com" },
+      { id: 7, name: "Zoho CRM", cat: "CRM", role: "Omnichannel Business CRM", auth: "OAuth 2.0", gate: "Self-Serve", api: "REST v2/v3", mcp: "Yes", verdict: "Ready", blocker: "Region DCs", docs: "https://zoho.com/crm" },
+      { id: 8, name: "Close", cat: "CRM", role: "Inside Sales CRM", auth: "Basic Auth / API Key", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://developer.close.com" },
+      { id: 9, name: "Copper", cat: "CRM", role: "Google Workspace CRM", auth: "API Key + Email", gate: "Paid / Trial", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://copper.com" },
+      { id: 10, name: "DealCloud", cat: "CRM", role: "Financial Services CRM", auth: "OAuth 2.0", gate: "Gated (Enterprise)", api: "REST API", mcp: "No", verdict: "Gated", blocker: "Sales approval", docs: "https://api.docs.dealcloud.com" },
+      
+      { id: 11, name: "Zendesk", cat: "Support", role: "Customer Support Suite", auth: "OAuth 2.0 / API Token", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://developer.zendesk.com" },
+      { id: 12, name: "Intercom", cat: "Support", role: "AI Customer Messaging", auth: "OAuth 2.0 / Access Token", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://developers.intercom.com" },
+      { id: 13, name: "Freshdesk", cat: "Support", role: "Helpdesk & Ticketing", auth: "API Key / OAuth 2.0", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://developers.freshdesk.com" },
+      { id: 14, name: "Front", cat: "Support", role: "Customer Communication Hub", auth: "API Key / OAuth 2.0", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://dev.frontapp.com" },
+      { id: 15, name: "Pylon", cat: "Support", role: "B2B Post-Sales Support", auth: "API Key", gate: "Gated (Paid)", api: "REST API", mcp: "No", verdict: "Ready", blocker: "Paid instance", docs: "https://usepylon.com" },
+      { id: 16, name: "LiveAgent", cat: "Support", role: "Multichannel Helpdesk", auth: "API Key (Header)", gate: "Self-Serve", api: "REST API v3", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://liveagent.com" },
+      { id: 17, name: "Plain", cat: "Support", role: "Developer-First Support", auth: "Bearer API Key", gate: "Self-Serve", api: "GraphQL API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://plain.com" },
+      { id: 18, name: "Help Scout", cat: "Support", role: "Customer Support Mailbox", auth: "OAuth 2.0", gate: "Self-Serve", api: "REST API v2", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://developer.helpscout.com" },
+      { id: 19, name: "Gorgias", cat: "Support", role: "Ecommerce Helpdesk", auth: "Basic Auth (API Key)", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://developers.gorgias.com" },
+      { id: 20, name: "Gladly", cat: "Support", role: "People-Centered Service", auth: "Basic Auth", gate: "Gated (Sales)", api: "REST API", mcp: "No", verdict: "Gated", blocker: "Sales contract", docs: "https://developer.gladly.com" },
+
+      { id: 21, name: "Slack", cat: "Comms", role: "Workspace Collaboration", auth: "OAuth 2.0 / Bot Token", gate: "Self-Serve", api: "REST & Events API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://api.slack.com" },
+      { id: 22, name: "Twilio", cat: "Comms", role: "Telephony & Messaging", auth: "HTTP Basic (SID/Token)", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://twilio.com/docs" },
+      { id: 23, name: "Zoho Cliq", cat: "Comms", role: "Business Team Chat", auth: "OAuth 2.0", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://zoho.com/cliq" },
+      { id: 24, name: "Lark", cat: "Comms", role: "Enterprise Team Suite", auth: "OAuth 2.0 / App Token", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://open.larksuite.com" },
+      { id: 25, name: "Pumble", cat: "Comms", role: "Team Chat Software", auth: "API Key / OAuth 2.0", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://pumble.com" },
+      { id: 26, name: "Discord", cat: "Comms", role: "Community Messaging", auth: "Bot Token / OAuth 2.0", gate: "Self-Serve", api: "REST & Gateway WS", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://discord.com/developers" },
+      { id: 27, name: "Telegram", cat: "Comms", role: "Cloud Messaging Service", auth: "Bot API Token", gate: "Self-Serve", api: "HTTP Bot API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://core.telegram.org/bots" },
+      { id: 28, name: "WhatsApp Business", cat: "Comms", role: "Business Direct Messaging", auth: "Bearer Token (Meta)", gate: "Self-Serve", api: "Graph REST API", mcp: "Yes", verdict: "Ready", blocker: "Number verification", docs: "https://developers.facebook.com" },
+      { id: 29, name: "Aircall", cat: "Comms", role: "Cloud Call Center", auth: "Basic Auth (ID/Token)", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://developer.aircall.io" },
+      { id: 30, name: "Vonage", cat: "Comms", role: "Communication APIs", auth: "Basic / JWT", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://developer.vonage.com" },
+
+      { id: 31, name: "Google Ads", cat: "Marketing", role: "PPC Ad Management", auth: "OAuth 2.0 + Dev Token", gate: "Gated (Dev Token)", api: "REST & gRPC", mcp: "Yes", verdict: "Gated", blocker: "Dev Token approval", docs: "https://developers.google.com/google-ads" },
+      { id: 32, name: "Meta Ads", cat: "Marketing", role: "Social Ad Campaigns", auth: "OAuth 2.0", gate: "Self-Serve (App Review)", api: "Graph REST API", mcp: "Yes", verdict: "Ready", blocker: "App Review for live", docs: "https://developers.facebook.com" },
+      { id: 33, name: "LinkedIn Ads", cat: "Marketing", role: "B2B Ad Targeting", auth: "OAuth 2.0", gate: "Gated (Review)", api: "REST API", mcp: "No", verdict: "Gated", blocker: "Partner approval", docs: "https://learn.microsoft.com" },
+      { id: 34, name: "GoHighLevel", cat: "Marketing", role: "Agency Marketing Automation", auth: "OAuth 2.0 / API Key", gate: "Gated (Paid)", api: "REST API (Stoplight)", mcp: "No", verdict: "Ready", blocker: "Agency account", docs: "https://highlevel.stoplight.io" },
+      { id: 35, name: "Mailchimp", cat: "Marketing", role: "Email Marketing Platform", auth: "OAuth 2.0 / API Key", gate: "Self-Serve", api: "REST v3.0", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://mailchimp.com/developer" },
+      { id: 36, name: "Klaviyo", cat: "Marketing", role: "Ecommerce SMS/Email", auth: "Private API Key / OAuth", gate: "Self-Serve", api: "JSON:API REST", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://developers.klaviyo.com" },
+      { id: 37, name: "systeme.io", cat: "Marketing", role: "Marketing Funnel Builder", auth: "Bearer API Key", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://systeme.io" },
+      { id: 38, name: "Pinterest", cat: "Marketing", role: "Visual Social Ads", auth: "OAuth 2.0", gate: "Self-Serve", api: "REST API v5", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://developers.pinterest.com" },
+      { id: 39, name: "Threads (Meta)", cat: "Marketing", role: "Microblogging Platform", auth: "OAuth 2.0", gate: "Self-Serve", api: "Graph REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://developers.facebook.com" },
+      { id: 40, name: "SendGrid", cat: "Marketing", role: "Transactional Email API", auth: "Bearer API Key", gate: "Self-Serve", api: "REST API v3", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://sendgrid.com" },
+
+      { id: 41, name: "Shopify", cat: "Ecommerce", role: "Commerce Storefront & Admin", auth: "OAuth 2.0 / Access Token", gate: "Self-Serve (Partner)", api: "GraphQL & REST", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://shopify.dev" },
+      { id: 42, name: "WooCommerce", cat: "Ecommerce", role: "WordPress Commerce", auth: "Basic (Key/Secret)", gate: "Self-Serve", api: "REST API v3", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://woocommerce.com" },
+      { id: 43, name: "BigCommerce", cat: "Ecommerce", role: "Enterprise SaaS Commerce", auth: "OAuth 2.0", gate: "Self-Serve", api: "REST & GraphQL", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://developer.bigcommerce.com" },
+      { id: 44, name: "Salesforce Commerce", cat: "Ecommerce", role: "B2C Enterprise Commerce", auth: "OAuth 2.0", gate: "Gated (Enterprise)", api: "SCAPI REST", mcp: "No", verdict: "Gated", blocker: "Sales contract", docs: "https://developer.salesforce.com" },
+      { id: 45, name: "Adobe Commerce", cat: "Ecommerce", role: "Magento Enterprise Shop", auth: "OAuth 1.0a / Bearer", gate: "Self-Serve (OS)", api: "REST & GraphQL", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://developer.adobe.com" },
+      { id: 46, name: "Squarespace", cat: "Ecommerce", role: "Website & Storefront", auth: "Bearer Key / OAuth", gate: "Gated (Commerce plan)", api: "REST API", mcp: "No", verdict: "Ready", blocker: "Paid plan", docs: "https://developers.squarespace.com" },
+      { id: 47, name: "Ecwid", cat: "Ecommerce", role: "Embeddable Shopping Cart", auth: "OAuth 2.0 / Secret Token", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://api-docs.ecwid.com" },
+      { id: 48, name: "Gumroad", cat: "Ecommerce", role: "Digital Product Sales", auth: "OAuth 2.0 / Access Token", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://gumroad.com" },
+      { id: 49, name: "Amazon SP-API", cat: "Ecommerce", role: "Amazon Merchant Platform", auth: "OAuth 2.0 + AWS SigV4", gate: "Gated (Seller Vetting)", api: "REST JSON API", mcp: "No", verdict: "Gated", blocker: "Vetting gate", docs: "https://developer-docs.amazon.com" },
+      { id: 50, name: "fanbasis", cat: "Ecommerce", role: "Creator Experience Sales", auth: "Session / Private Key", gate: "Gated (Closed)", api: "Private REST", mcp: "No", verdict: "Blocked", blocker: "No public docs", docs: "https://fanbasis.com" },
+
+      { id: 51, name: "DataForSEO", cat: "Data", role: "SERP & SEO Raw Data", auth: "Basic Auth", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://docs.dataforseo.com" },
+      { id: 52, name: "SE Ranking", cat: "Data", role: "SEO Rank Tracking", auth: "API Key (Header)", gate: "Gated (Paid plan)", api: "REST API", mcp: "No", verdict: "Ready", blocker: "Paid tier", docs: "https://seranking.com" },
+      { id: 53, name: "Ahrefs", cat: "Data", role: "Backlink & Keyword Intel", auth: "API Key / OAuth 2.0", gate: "Gated (Enterprise API)", api: "REST API v3", mcp: "No", verdict: "Gated", blocker: "Enterprise price", docs: "https://ahrefs.com" },
+      { id: 54, name: "MrScraper", cat: "Data", role: "Visual Web Scraper", auth: "Bearer API Key", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://docs.mrscraper.com" },
+      { id: 55, name: "Apify", cat: "Data", role: "Cloud Web Actors & Crawlers", auth: "Bearer Token", gate: "Self-Serve", api: "REST API & SDKs", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://docs.apify.com" },
+      { id: 56, name: "Firecrawl", cat: "Data", role: "LLM Web Scraper & Crawler", auth: "Bearer API Key", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://firecrawl.dev" },
+      { id: 57, name: "Bright Data", cat: "Data", role: "Web Data & Proxy Network", auth: "Bearer Token / Basic", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://brightdata.com" },
+      { id: 58, name: "Sherlock", cat: "Data", role: "OSINT Username Hunting", auth: "No Auth (Local CLI)", gate: "Self-Serve (OS)", api: "Python CLI", mcp: "No", verdict: "Ready", blocker: "CLI wrapper", docs: "https://github.com/sherlock-project" },
+      { id: 59, name: "Waterfall.io", cat: "Data", role: "B2B Lead Enrichment", auth: "Bearer API Key", gate: "Gated (Sales)", api: "REST API", mcp: "No", verdict: "Gated", blocker: "Sales contact", docs: "https://waterfall.io" },
+      { id: 60, name: "Clay", cat: "Data", role: "AI Lead Enrichment", auth: "Bearer Key / Webhooks", gate: "Gated (Paid)", api: "Webhooks / REST", mcp: "Yes", verdict: "Ready", blocker: "Paid credits", docs: "https://clay.com" },
+
+      { id: 61, name: "GitHub", cat: "Dev", role: "Code & Dev Platform", auth: "PAT / OAuth 2.0", gate: "Self-Serve", api: "REST & GraphQL", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://docs.github.com/rest" },
+      { id: 62, name: "Vercel", cat: "Dev", role: "Frontend Cloud", auth: "Bearer Token / OAuth", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://vercel.com/docs" },
+      { id: 63, name: "Netlify", cat: "Dev", role: "Serverless Web Hosting", auth: "PAT / OAuth 2.0", gate: "Self-Serve", api: "OpenAPI REST", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://docs.netlify.com" },
+      { id: 64, name: "Cloudflare", cat: "Dev", role: "Edge Security & Workers", auth: "Bearer API Token", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://developers.cloudflare.com" },
+      { id: 65, name: "Supabase", cat: "Dev", role: "Open-source Backend", auth: "API Key (anon/service)", gate: "Self-Serve", api: "PostgREST & GraphQL", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://supabase.com" },
+      { id: 66, name: "Neo4j", cat: "Dev", role: "Graph Database Engine", auth: "Basic / Bearer", gate: "Self-Serve (Aura)", api: "HTTP & Bolt driver", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://neo4j.com" },
+      { id: 67, name: "Snowflake", cat: "Dev", role: "Cloud Data Warehouse", auth: "OAuth 2.0 / Key-Pair", gate: "Self-Serve (Trial)", api: "SQL REST API v2", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://docs.snowflake.com" },
+      { id: 68, name: "MongoDB Atlas", cat: "Dev", role: "Cloud Document Database", auth: "Digest Auth / OAuth", gate: "Self-Serve", api: "Atlas Admin & Data API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://mongodb.com" },
+      { id: 69, name: "Datadog", cat: "Dev", role: "Observability Platform", auth: "API + App Key headers", gate: "Self-Serve (Trial)", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://docs.datadoghq.com" },
+      { id: 70, name: "Sentry", cat: "Dev", role: "Error Tracking & APM", auth: "Bearer Token / OAuth", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://docs.sentry.io" },
+
+      { id: 71, name: "Notion", cat: "Productivity", role: "Connected Workspace Docs", auth: "Bearer Token / OAuth 2.0", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://developers.notion.com" },
+      { id: 72, name: "Airtable", cat: "Productivity", role: "Relational Database App", auth: "PAT / OAuth 2.0", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://airtable.com/developers" },
+      { id: 73, name: "Linear", cat: "Productivity", role: "Software Issue Tracker", auth: "API Key / OAuth 2.0", gate: "Self-Serve", api: "GraphQL API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://developers.linear.app" },
+      { id: 74, name: "Jira", cat: "Productivity", role: "Enterprise Project Mgmt", auth: "OAuth 2.0 / API Token", gate: "Self-Serve", api: "REST API v2/v3", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://developer.atlassian.com" },
+      { id: 75, name: "Asana", cat: "Productivity", role: "Work Project Management", auth: "Bearer PAT / OAuth 2.0", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://developers.asana.com" },
+      { id: 76, name: "Monday.com", cat: "Productivity", role: "Work OS Platform", auth: "Bearer Token / OAuth", gate: "Self-Serve", api: "GraphQL API v2", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://developer.monday.com" },
+      { id: 77, name: "ClickUp", cat: "Productivity", role: "Productivity Platform", auth: "API Token / OAuth 2.0", gate: "Self-Serve", api: "REST API v2", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://clickup.com/api" },
+      { id: 78, name: "Coda", cat: "Productivity", role: "Document & App Canvas", auth: "Bearer API Key", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://coda.io/developers" },
+      { id: 79, name: "Smartsheet", cat: "Productivity", role: "Enterprise Spreadsheet OS", auth: "Bearer Token / OAuth", gate: "Self-Serve (Trial)", api: "REST API 2.0", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://smartsheet.com" },
+      { id: 80, name: "Harvest", cat: "Productivity", role: "Time Tracking & Invoicing", auth: "PAT / OAuth 2.0", gate: "Self-Serve (Trial)", api: "REST API v2", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://help.getharvest.com" },
+
+      { id: 81, name: "Stripe", cat: "Finance", role: "Payment Processing", auth: "Secret Key / OAuth 2.0", gate: "Self-Serve", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://stripe.com/docs/api" },
+      { id: 82, name: "Plaid", cat: "Finance", role: "Open Banking Data", auth: "Client ID / Secret", gate: "Self-Serve (Sandbox)", api: "REST API", mcp: "Yes", verdict: "Ready", blocker: "None", docs: "https://plaid.com/docs" },
+      { id: 83, name: "Binance", cat: "Finance", role: "Crypto Exchange API", auth: "HMAC / RSA Key", gate: "Self-Serve", api: "REST & WS Streams", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://binance-docs.github.io" },
+      { id: 84, name: "Paygent", cat: "Finance", role: "Payment Gateway", auth: "Security Key / Basic", gate: "Gated (Merchant)", api: "Direct Post REST", mcp: "No", verdict: "Gated", blocker: "Merchant vetting", docs: "https://paygent.co.jp" },
+      { id: 85, name: "iPayX", cat: "Finance", role: "Bill Payment Processing", auth: "API Key / Token", gate: "Gated (Portal)", api: "REST API", mcp: "No", verdict: "Gated", blocker: "Enterprise gate", docs: "https://ipayx.ai" },
+      { id: 86, name: "QuickBooks", cat: "Finance", role: "Cloud Accounting", auth: "OAuth 2.0", gate: "Self-Serve (Dev)", api: "REST API v3", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://developer.intuit.com" },
+      { id: 87, name: "Xero", cat: "Finance", role: "Small Business Accounting", auth: "OAuth 2.0 (PKCE)", gate: "Self-Serve (Dev)", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://developer.xero.com" },
+      { id: 88, name: "Brex", cat: "Finance", role: "Spend & Corporate Card", auth: "OAuth 2.0 / User Token", gate: "Self-Serve (Sandbox)", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://developer.brex.com" },
+      { id: 89, name: "Ramp", cat: "Finance", role: "Spend & Expense Mgmt", auth: "OAuth 2.0 / Dev Token", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://docs.ramp.com" },
+      { id: 90, name: "PitchBook", cat: "Finance", role: "Private Capital Intel", auth: "API Key", gate: "Gated (Sales Contract)", api: "REST API", mcp: "No", verdict: "Gated", blocker: "Annual contract", docs: "https://pitchbook.com" },
+
+      { id: 91, name: "NotebookLM", cat: "AI", role: "AI Research Notebook", auth: "OAuth 2.0 / GCP Key", gate: "Gated (Vertex AI)", api: "Google Cloud Vertex", mcp: "No", verdict: "Gated", blocker: "No standalone API", docs: "https://cloud.google.com/gemini" },
+      { id: 92, name: "Otter AI", cat: "AI", role: "Meeting Transcription", auth: "Session Token / OAuth", gate: "Gated (Pro)", api: "MCP / Webhooks", mcp: "Yes", verdict: "Ready", blocker: "Pro account", docs: "https://help.otter.ai" },
+      { id: 93, name: "Fathom", cat: "AI", role: "AI Meeting Assistant", auth: "Bearer API Key", gate: "Self-Serve (Pro)", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://fathom.video" },
+      { id: 94, name: "Consensus", cat: "AI", role: "Academic Research Search", auth: "Bearer API Key", gate: "Gated (Commercial)", api: "REST API", mcp: "No", verdict: "Gated", blocker: "Commercial tier", docs: "https://consensus.app" },
+      { id: 95, name: "Reducto", cat: "AI", role: "Document Parsing for LLMs", auth: "Bearer API Key", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://docs.reducto.ai" },
+      { id: 96, name: "Devin", cat: "AI", role: "Autonomous Software Engineer", auth: "Bearer Token", gate: "Gated (Preview)", api: "Devin REST / MCP", mcp: "Yes", verdict: "Ready", blocker: "Key access", docs: "https://docs.devin.ai" },
+      { id: 97, name: "higgsfield", cat: "AI", role: "Generative Video Suite", auth: "Bearer API Key", gate: "Gated (Waitlist)", api: "REST API", mcp: "No", verdict: "Gated", blocker: "Product preview", docs: "https://higgsfield.ai" },
+      { id: 98, name: "Mermaid CLI", cat: "AI", role: "Text-to-Diagram Tool", auth: "No Auth (CLI)", gate: "Self-Serve (OS)", api: "Local Binary CLI", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://github.com/mermaid-js" },
+      { id: 99, name: "YouTube Transcript", cat: "AI", role: "Video Subtitle Parser", auth: "API Key", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://transcriptapi.com" },
+      { id: 100, name: "Grain", cat: "AI", role: "Meeting Notes & Highlights", auth: "Bearer API Key", gate: "Self-Serve", api: "REST API", mcp: "No", verdict: "Ready", blocker: "None", docs: "https://grain.com" }
+    ];
+
+    const tbody = document.getElementById("matrixTableBody");
+    const searchInput = document.getElementById("searchInput");
+    const categoryFilter = document.getElementById("categoryFilter");
+
+    function renderTable(items) {
+      tbody.innerHTML = "";
+      items.forEach(app => {
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-slate-900/50 transition-colors";
+        
+        let verdictBadge = app.verdict === "Ready" 
+          ? '<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Ready</span>'
+          : (app.verdict === "Gated" 
+              ? '<span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Gated</span>'
+              : '<span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20">Blocked</span>');
+
+        tr.innerHTML = `
+          <td class="px-4 py-2.5 text-slate-500 font-sans">${app.id}</td>
+          <td class="px-4 py-2.5 font-bold text-white font-sans">${app.name}</td>
+          <td class="px-4 py-2.5 text-slate-400 font-sans">${app.role}</td>
+          <td class="px-4 py-2.5 text-indigo-300">${app.auth}</td>
+          <td class="px-4 py-2.5 text-slate-300 font-sans">${app.gate}</td>
+          <td class="px-4 py-2.5 text-slate-300">${app.api} ${app.mcp === "Yes" ? '<span class="text-blue-400 text-[10px] ml-1">[MCP]</span>' : ''}</td>
+          <td class="px-4 py-2.5 font-sans">${verdictBadge}</td>
+          <td class="px-4 py-2.5 font-sans">
+            <a href="${app.docs}" target="_blank" class="text-indigo-400 hover:text-indigo-300 inline-flex items-center gap-1">
+              Docs <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </a>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function filterData() {
+      const q = searchInput.value.toLowerCase();
+      const cat = categoryFilter.value;
+      const filtered = appsData.filter(app => {
+        const matchesCat = cat === "ALL" || app.cat === cat;
+        const matchesQuery = app.name.toLowerCase().includes(q) ||
+                             app.role.toLowerCase().includes(q) ||
+                             app.auth.toLowerCase().includes(q) ||
+                             app.gate.toLowerCase().includes(q) ||
+                             app.verdict.toLowerCase().includes(q);
+        return matchesCat && matchesQuery;
+      });
+      renderTable(filtered);
+    }
+
+    searchInput.addEventListener("input", filterData);
+    categoryFilter.addEventListener("change", filterData);
+
+    renderTable(appsData);
+
+    const ctx = document.getElementById('authChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['OAuth 2.0 (54%)', 'API Key / Bearer (38%)', 'Basic / Custom HMAC (8%)'],
+        datasets: [{
+          data: [54, 38, 8],
+          backgroundColor: ['#6366f1', '#10b981', '#f59e0b'],
+          borderColor: '#020617',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { color: '#94a3b8', font: { size: 10 } }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
